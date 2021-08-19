@@ -25,7 +25,7 @@ pipeline {
 	stage('Jmeter Tests'){
 		steps{
 			echo 'Project performance testing stage'
-			bat label: 'Project packaging', script: '''cd C:\apache-jmeter-5.2.1\bin
+			bat label: 'Project packaging', script: '''cd C:/apache-jmeter-5.2.1/bin
 								   jmeter -jjmeter.save.saveservice.output_format=csv -n -t C:/apache-jmeter-5.2.1/bin/Producttestplan1.jmx -l C:/apache-jmeter-5.2.1/bin/jmeter-html-reports/ProductReportJenkins1.csv -q C:/apache-jmeter-5.2.1/bin/user.properties -e -o C:/apache-jmeter-5.2.1/bin/jmeter-html-reports/html-product-reportJenkins1'''
 		}
 	} 	
